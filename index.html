@@ -31,25 +31,27 @@
         <div class="row">
             <div class="col text-center">
                 <h1 class="balance">Balance</h1>
+                <p id="account-balance">$0.00</p>
             </div>
             <div class="col form-container">
-                <form class="card transaction-card">
+                <form class="card transaction-card" id="transaction-form">
                     <div class="card-header">Submit Transaction</div>
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="amount" class="form-label ">Amount</label>
-                            <input type="number" class="form-control" id="amount" name="amount"
+                            <div id="amount-input"><p>$</p>
+                            <input type="number" step="0.01" class="form-control" id="amount" name="amount"
                                 aria-describedby="emailHelp">
-                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="transaction-type" class="form-label">Transaction Type</label>
                             <select class="form-select" id="transaction-type" name="transaction-type">
                                 <option value="1">Deposit</option>
                                 <option value="2">Withdraw</option>
-                              </select>
+                            </select>
                         </div>
-                        <button type="submit" class="btn btn-primary transaction-button">Submit</button>
+                        <button id="transaction-button" type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
